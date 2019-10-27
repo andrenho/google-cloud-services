@@ -24,8 +24,9 @@ function get(url, id) {
     });
 }
 
-function updateStorage() {
+function update() {
   get('https://storage.googleapis.com/storage-learn-andrenho/status', 'storage');
+  get('http://35.202.188.99/ip', 'compute');
 }
 
     </script>
@@ -35,7 +36,8 @@ function updateStorage() {
     <p>Google cloud services:</p>
     <table>
       <tr><td width="100">Storage</td><td><div class="status" id="storage">undefined</div></td></tr>
+      <tr><td width="100">Compute</td><td><div class="status" id="compute">undefined</div></td></tr>
     </table>
-    <p><input type="button" value="Update services" onclick="updateStorage();" /></p>
+    <p><input type="button" value="Update services" onclick="update();" /></p>
   </body>
 </html>

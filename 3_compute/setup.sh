@@ -10,7 +10,7 @@ gcloud beta compute \
   --machine-type=f1-micro \
   --subnet=default \
   --network-tier=PREMIUM \
-  --metadata-from-file startup-script=startup-script.sh
+  --metadata-from-file startup-script=startup-script.sh \
   --maintenance-policy=MIGRATE \
   --service-account=$SA_EMAIL \
   --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append \
