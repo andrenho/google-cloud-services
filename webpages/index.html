@@ -2,12 +2,30 @@
   <head>
     <title>Google Cloud Test</title>
     <style>
-      .status { font-weight: bold; text-color: darkslategray; }
+      .status { font-weight: bold; color: darkslategray; }
+      .ok { font-weight: bold; color: darkgreen; }
+      .error { font-weight: bold; color: darkred; }
     </style>
     <script>
 
+function get(url, id) {
+  fetch(url)
+    .then(function(data) {
+      data.text()
+        .then(function(text) {
+          if (data.status >= 400)
+            document.getElementById(id).innerHTML = "<div class='error'>error (" + text + ")</div>";
+          else
+            document.getElementById(id).innerHTML = "<div class='ok'>ok (" + text + ")</div>";
+        });
+    })
+    .catch(function(error) { 
+      document.getElementById(id).innerHTML = "<div class='error'>error (" + error + ")</div>";
+    });
+}
+
 function updateStorage() {
-  console.log("TODO");  // TODO
+  get('https://storage.googleapis.com/storage-learn-andrenho/status', 'storage');
 }
 
     </script>
