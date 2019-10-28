@@ -1,19 +1,53 @@
-- destroy everything
-- setup DNS
-- create certificate
+Will be implemented:
 
-- compute
-  - static IP
-  - get URLs directly from scripts
+ - a website that checks
+   - a file in another storage
+   - a service in a compute instance in a public subnet
+      - that gets data from another compute instance in a private subnet
+   - kubernetes service
+     - that gets its data from a datastore
+   - an app engine implementation
+     - that gets its data from a cloud SQL
+   - a cloudrun container
+     - that gets its data from a datastore
+   - a cloudfunction
+     - that reacts to new pub/sub messages
+     - that reacts to events in storage
+ - DNS, a load balancer and security configuration to support all that
+ - logging configuration
+ - something from cloud marketplace?
+ 
+To do:
 
-
-- kubernetes
-  - get data from database
-- app engine
-  - get data from datastore
-- cloud run
-
-- compute = deploy pub/sub
-
-learn:
-  - understand IAM better
+0_basic
+  - setup security
+  - setup DNS
+  - create certificate
+1_website
+  - create page (ok)
+  - deploy page (ok)
+2_storage
+  - deploy (ok)
+3_compute
+  - create VPC
+  - create subnets
+  - configure firewall
+  - setup public instances
+  - create instance group
+  - create load balancer
+  - setup private instance
+4_kubernetes
+  - create datastore
+  - setup kubernetes
+  - create application
+5_app_engine
+  - create SQL database
+  - create application
+  - deploy application
+6_cloud_run
+  - create container
+  - deploy container
+7_cloud_function
+  - create pub/sub
+  - create functions
+  - deploy functions
