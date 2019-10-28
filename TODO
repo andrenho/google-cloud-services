@@ -21,6 +21,7 @@ To do:
 
 0_basic
   - setup security
+    - add roles
   - setup DNS
   - create certificate
 1_website
@@ -32,7 +33,10 @@ To do:
   - create VPC
   - create subnets
   - configure firewall
+  - create disk
   - setup public instances
+  - setup SSH access
+  - install stackdriver agent
   - create instance group
   - create load balancer
   - setup private instance
