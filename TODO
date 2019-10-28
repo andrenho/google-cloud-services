@@ -1,8 +1,19 @@
 - destroy everything
+- setup DNS
+- create certificate
+
+- compute
+  - static IP
+  - get URLs directly from scripts
+
+
 - kubernetes
   - get data from database
 - app engine
   - get data from datastore
 - cloud run
 
-- understand IAM better
+- compute = deploy pub/sub
+
+learn:
+  - understand IAM better

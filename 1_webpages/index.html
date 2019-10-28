@@ -21,18 +21,19 @@ function get(url, id) {
     })
     .catch(function(error) { 
       document.getElementById(id).innerHTML = "<div class='error'>error (" + error + ")</div>";
+      throw error;
     });
 }
 
 function update() {
   get('https://storage.googleapis.com/storage-learn-andrenho/status', 'storage');
-  get('http://35.202.188.99/ip', 'compute');
+  get('https://34.95.193.94/ip', 'compute');
 }
 
     </script>
   </head>
   <body>
-    <img src="google-cloud.jpg" width="400" />
+    <!-- <img src="google-cloud.jpg" width="400" /> -->
     <p>Google cloud services:</p>
     <table>
       <tr><td width="100">Storage</td><td><div class="status" id="storage">undefined</div></td></tr>
