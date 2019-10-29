@@ -36,11 +36,15 @@ gcloud compute target-https-proxies delete https-lb-proxy -q
 
 # backend
 
-gcloud compute health-checks delete http http-basic-check -q
-
 gcloud compute url-maps delete web-map -q
 
 gcloud compute url-maps remove-path-matcher web-map --path-matcher-name bucket-matcher -q
+
+gcloud compute health-checks delete http http-basic-check -q
+
+# reserved IP
+
+gcloud compute addresses delete lb-ip --global -q
 
 # certificate
 
