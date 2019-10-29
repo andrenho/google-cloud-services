@@ -37,7 +37,7 @@ gcloud compute url-maps create web-map \
 gcloud compute url-maps add-path-matcher web-map \
   --default-service web-backend-service \
   --path-matcher-name bucket-matcher \
-  --backend-bucket-path-rules="/website=static-bucket"
+  --backend-bucket-path-rules="/website/*=static-bucket"
 
 # HTTPS proxy
 

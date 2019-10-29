@@ -2,4 +2,4 @@
 
 . ../settings.sh
 
-gsutil cp index.html google-cloud.jpg gs://$WEBSITE_BUCKET
+gsutil cp index.html google-cloud.jpg gs://$WEBSITE_BUCKET/website/
