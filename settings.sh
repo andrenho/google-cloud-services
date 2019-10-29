@@ -2,6 +2,7 @@ WEBSITE_BUCKET='website-learn-andrenho'
 STORAGE_BUCKET='storage-learn-andrenho'
 SERVICE_ACCOUNT='service-account-andrenho'
 INSTANCE_NAME='learn-instance'
+DNS_ZONE='learn-gcp'
 DOMAIN='learn-gcp.gamesmith.uk'
 
 get_service_account() {
