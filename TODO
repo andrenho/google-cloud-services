@@ -22,16 +22,17 @@ To do:
  - separate backend
 
 0_basic
-  - setup security
+  - setup security (ok)
     - add roles
-  - setup DNS
-  - create certificate
+  - setup DNS (ok)
+  - create certificate (ok)
 1_website
   - create page (ok)
   - deploy page (ok)
 2_storage
   - deploy (ok)
 3_compute
+  - create load balancer (ok)
   - create VPC
   - create subnets
   - configure firewall
@@ -40,7 +41,6 @@ To do:
   - setup SSH access
   - install stackdriver agent
   - create instance group
-  - create load balancer (ok)
   - setup private instance
 4_kubernetes
   - create datastore
