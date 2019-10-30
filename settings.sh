@@ -5,6 +5,7 @@ INSTANCE_NAME='learn-instance'
 DNS_ZONE='learn-gcp'
 DOMAIN='learn-gcp.gamesmith.uk'
 BACKEND_SERVICE='web-backend-service'
+VPC_NAME='learn-vpc'
 
 get_service_account() {
   local r=$(gcloud iam service-accounts list --filter="displayName:$SERVICE_ACCOUNT" --format="value(email)")
