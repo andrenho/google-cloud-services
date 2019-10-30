@@ -64,3 +64,7 @@ gcloud dns record-sets transaction add 0\ issue\ \"letsencrypt.org\" 0\ issue\ \
 
 gcloud dns record-sets transaction execute \
   --zone=$DNS_ZONE
+
+# path matchers
+
+./setup_matcher.sh

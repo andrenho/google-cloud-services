@@ -38,7 +38,7 @@ gcloud compute target-https-proxies delete https-lb-proxy -q
 
 gcloud compute url-maps delete web-map -q
 
-gcloud compute url-maps remove-path-matcher web-map --path-matcher-name bucket-matcher -q
+gcloud compute backend-services delete $BACKEND_SERVICE --global -q
 
 gcloud compute health-checks delete http http-basic-check -q
 
@@ -49,3 +49,7 @@ gcloud compute addresses delete lb-ip --global -q
 # certificate
 
 gcloud beta compute ssl-certificates delete main --global -q
+
+# path matches
+
+./destroy_matcher.sh
