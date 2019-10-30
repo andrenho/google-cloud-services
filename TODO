@@ -33,9 +33,9 @@ To do:
   - deploy (ok)
 3_compute
   - create load balancer (ok)
-  - create VPC
-  - create subnets
-  - configure firewall
+  - create VPC (ok)
+  - create subnets (ok)
+  - configure firewall (ok)
   - create disk
   - setup public instances
   - setup SSH access

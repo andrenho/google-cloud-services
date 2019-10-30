@@ -6,7 +6,7 @@ SA_EMAIL=$(gcloud iam service-accounts list --filter="displayName:$SERVICE_ACCOU
 
 gcloud beta compute instances create $INSTANCE_NAME \
   --machine-type=f1-micro \
-  --subnet=default \
+  --subnet=public \
   --network-tier=PREMIUM \
   --metadata-from-file startup-script=startup-script.sh \
   --maintenance-policy=MIGRATE \
@@ -20,11 +20,11 @@ gcloud beta compute instances create $INSTANCE_NAME \
   --boot-disk-device-name=$INSTANCE_NAME \
   --reservation-affinity=any
 
-gcloud compute firewall-rules create allow-https \
-  --direction=INGRESS \
-  --priority=1000 \
-  --network=default \
-  --action=ALLOW \
-  --rules=tcp:443 \
-  --source-ranges=0.0.0.0/0 \
-  --target-tags=allow-https
+#gcloud compute firewall-rules create allow-https \
+#  --direction=INGRESS \
+#  --priority=1000 \
+#  --network=default \
+#  --action=ALLOW \
+#  --rules=tcp:443 \
+#  --source-ranges=0.0.0.0/0 \
+#  --target-tags=allow-https
